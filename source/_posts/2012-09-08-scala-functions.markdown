@@ -16,7 +16,7 @@ initially was a bit frustrating. But now I have got a better appreciation for th
 The most common way to divide pieces of code and make it manageable is to write functions. Scala offers different flavours when it comes to writing
 functions.
 
-``` scala Basic function
+```scala
 def max(x: Int, y: Int): Int = {
   if (x > y) x
   else y
@@ -33,7 +33,7 @@ What if we had to write a function which has no need of returning a value. Like 
 screen.  Well in that case we simply omit the equals sign. The return type of a function without equals sign is set to `Unit`.  `Unit` in _Scala_ is
 similar to `NULL` in _Java_ and `nil` in _Ruby_, which marks to nothing.
 
-``` scala Basic function(no parameters, no return value)
+```scala
 def sayHi() {
   println("Hi")
 }
@@ -45,7 +45,7 @@ The above example shows a function `sayHi` which takes no parameters, returns `U
 
 Let's try out some code in the scala REPL.
 
-``` bash REPL basics
+```bash
   deepak@cheeseburst:~$ scala 
   scala> 1 + 2
   res0: Int = 3
@@ -70,7 +70,7 @@ code in the REPL except for few. Couple of points to note, after evaluating ever
 In case if the expression returns Unit, the interpreter will remain silent with respect to the return type. Checkout the print statement where there
 is no information about the return type is shown. 
 
-``` bash REPL basics
+```bash
 scala> 3
 res0: Int = 3
 
@@ -88,7 +88,7 @@ The resX indentifier holds the returned value through out the session. It can be
 
 This is my favorite part while writing scala code. Scala gives you some syntactic sweetness when you are writing smaller functions.
 
-``` scala Basic Function(without parenthesis)
+```scala
 //Dah, boring function
 def multiply(x:Int, y:Int): Int = {
   x*y
@@ -104,7 +104,7 @@ def multiply(x: Int, y:Int) :Int = x * y
 
 Let's try out this code in the REPL.
 
-``` scala Function Invocation in REPL
+```scala
 scala> def multiply(x: Int, y:Int) :Int = x * y
 multiply: (x: Int, y: Int)Int
 
@@ -122,7 +122,7 @@ In all our previous functions, we have been explicitly conveying the compiler ab
 parenthesis.  But Scala can be very smart in figuring out the return type of most of the functions. So if we omit the return type from our function
 definition, the compiler will figure out the return type. 
 
-``` scala Basic functions(without return type)
+```scala
 def multiply(x: Int, y:Int) = x * y
 //like a boss, huh?
 ```
